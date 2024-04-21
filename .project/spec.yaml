@@ -110,7 +110,8 @@ execution:
     target: /data/
     description: Hugging Face hub cache dir
     options: ""
-  - type: volume
+  - type: bind
+    source: /mnt/e/milvus
     target: /mnt/milvus/
     description: Volume for storing the milvus database
-    options: ""
+    options: rw
