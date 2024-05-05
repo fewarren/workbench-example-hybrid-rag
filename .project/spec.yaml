@@ -95,7 +95,7 @@ execution:
   resources:
     gpu:
       requested: 1
-    sharedMemoryMB: 4096
+    sharedMemoryMB: 16383
   secrets:
   - variable: NVCF_RUN_KEY
     description: NVCF Run Key for Cloud Inference
@@ -110,7 +110,7 @@ execution:
     target: /data/
     description: Hugging Face hub cache dir
     options: ""
-  - type: volume
+  - type: host
     target: /mnt/milvus/
-    description: Volume for storing the milvus database
+    description: vector database
     options: ""
